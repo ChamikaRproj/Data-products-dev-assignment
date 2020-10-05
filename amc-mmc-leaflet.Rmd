@@ -1,0 +1,51 @@
+---
+title: "Leaflet-Assignment"
+author: "Dr. Chamika Senanayake"
+date: "10/5/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Mobile Malaria Clinics (MMC)
+
+This assignment illustrate mobile malaria clinics locations of Sri Lanka in 2017.
+behind this slide all data will be read and managed from csv file
+
+```{r, echo=TRUE, results=FALSE}
+library(leaflet)
+mmcgis <- read.csv(url("http://www.slchaem.lk/docs/mmc.csv"))
+df <- mmcgis[,c(1,2)]
+colnames(df)<-c("lng","lat")
+mmcicon <- makeIcon(
+iconUrl = "https://i.ibb.co/pQ9dszB/sticker-png-marsh-mosquitoes-malaria-mosquito-borne-disease-mosquito-control-mosquito-angle-logo-ins.png",
+iconWidth = 31*215/230, iconHeight = 31,
+iconAnchorX = 31*215/230/2, iconAnchorY = 16
+)
+```
+
+## Code for map plotting
+
+```{r echo=TRUE, eval=FALSE}
+library(leaflet)
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions(), icon = mmcicon)
+```
+
+
+## Mobile Malaria Clinics | Sri Lanka
+```{r Leaflet, echo=FALSE}
+library(leaflet)
+df %>%
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions(), icon = mmcicon)
+  
+```
+
+## Thank you!
+
