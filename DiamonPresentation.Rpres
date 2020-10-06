@@ -1,0 +1,41 @@
+Diamon (app) Presentation
+Week 4 - Course Project
+========================================================
+author: Dr. Chamika Senanayake
+date: 06/10/2020
+autosize: true
+
+Introduction
+========================================================
+Have you ever considered how jewels are valued past the quantity of carats(or weight)? Cost additionally relies upon the precious stone's cut, shading, and clearness.
+
+- Cut: quality of the diamond from best to worst (Ideal, Premium, Very Good, Good, Fair)
+- Color: best(D) to worst(J)
+- Clarity: measures how clear the diamond is from best to worst (IF, VVS2, VVS1, VS2, VS1, SI2, SI1, I1)
+
+This shiny app will predict diamond price based on your input of these factors as we have used it in previous courses
+
+Documentation
+========================================================
+
+summary of the "diamonds" dataset found in the ggplot2 R package. 
+
+```{r echo=FALSE}
+library(ggplot2)
+data(diamonds)
+str(diamonds[,c(1:4,7)])
+```
+
+ummary plot of the diamond data with each of the relevant variables plotted against each other
+========================================================
+
+```{r, echo=FALSE}
+plot(diamonds[,c(1:4,7)])
+```
+
+Thank you! have a nice day!
+========================================================
+
+Links
+- shiny app: https://chamikarproj.shinyapps.io/Data-products-dev-assignment/
+- source code [githubrepo]: https://github.com/ChamikaRproj/Data-products-dev-assignment/tree/assignment2
