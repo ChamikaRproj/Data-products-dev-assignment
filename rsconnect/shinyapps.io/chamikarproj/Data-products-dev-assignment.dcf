@@ -1,0 +1,13 @@
+name: Data-products-dev-assignment
+title: Data-products-dev-assignment
+username:
+account: chamikarproj
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2954297
+bundleId: 3708666
+url: https://chamikarproj.shinyapps.io/Data-products-dev-assignment/
+when: 1601993336.54961
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: amc-mmc-leaflet.html|amc-mmc-leaflet.Rmd|plotify-wk2-assignment.html|plotify-wk2-assignment.Rmd|README.md
